@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PhishGuard — Edukasi Phishing & Pencegahan</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="logo">
+        <span class="logo-icon">&#128737;</span>
+        <span class="logo-text">Nasrullah<span class="logo-nim">NIM H0625307</span></span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#pengertian">Pengertian</a></li>
+        <li><a href="#jenis">Jenis</a></li>
+        <li><a href="#modus">Modus Operandi</a></li>
+        <li><a href="#redflags">Red Flags</a></li>
+        <li><a href="#kasus">Kasus</a></li>
+        <li><a href="#praktik">Praktik</a></li>
+        <li><a href="#pencegahan">Pencegahan</a></li>
+        <li><a href="#glosarium">Glosarium</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#korban">Kalau Jadi Korban</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <header class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="grid-overlay"></div>
+      <div class="glow glow-1"></div>
+      <div class="glow glow-2"></div>
+      <canvas id="particles"></canvas>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge reveal">&#9888; Waspada Penipuan Digital</div>
+      <h1 class="reveal d1">Phishing:<br /><span class="text-gradient">Jangan Jadi Ikan</span></h1>
+      <p class="hero-sub reveal d2">
+        Pelajari modus operandi penipuan digital paling berbahaya di dunia,
+        kenali red flags-nya, dan uji kemampuan deteksimu lewat praktik interaktif.
+      </p>
+      <div class="hero-cta reveal d3">
+        <a href="#materi" class="btn btn-primary">Mulai Belajar &#8595;</a>
+        <a href="#praktik" class="btn btn-ghost">Langsung Praktik</a>
+      </div>
+      <div class="hero-stats reveal d4">
+        <div class="stat"><span class="stat-num" data-count="3.4" data-decimals="1">0</span><span class="stat-suffix">M+</span><p>domain phishing aktif</p></div>
+        <div class="stat"><span class="stat-num" data-count="90" data-decimals="0">0</span><span class="stat-suffix">%</span><p>penipuan dimulai dari email/SMS</p></div>
+        <div class="stat"><span class="stat-num" data-count="75" data-decimals="0">0</span><span class="stat-suffix">%</span><p>korban kehilangan akses karena 1 klik</p></div>
+      </div>
+    </div>
+    <div class="scroll-indicator"><span></span></div>
+  </header>
+
+  <!-- ===== PENGERTIAN ===== -->
+  <section class="section" id="pengertian">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">01 &mdash; Dasar</span>
+        <h2>Apa itu <span class="text-gradient">Phishing</span>?</h2>
+        <p class="section-desc">Satu kata yang harus kamu hafal di era digital.</p>
+      </div>
+      <div class="content-grid two-col">
+        <div class="card glass reveal">
+          <div class="card-icon">&#127907;</div>
+          <h3>Definisi</h3>
+          <p>
+            <strong>Phishing</strong> adalah teknik penipuan digital di mana pelaku
+            <em>memancing</em> (fishing) informasi sensitif — seperti kata sandi, nomor
+            kartu kredit, OTP, atau data pribadi — dengan menyamar sebagai pihak tepercaya
+            seperti bank, e-commerce, instansi pemerintah, atau rekan kerja.
+          </p>
+          <p class="mt-1">
+            Istilah ini memadukan kata <em>fishing</em> (memancing) dan <em>phreaking</em>
+            (peretasan telepon era 1970-an). Pelaku melempar "umpan" berupa email, SMS,
+            pesan WhatsApp, atau situs web palsu, lalu menunggu korban "menggigit".
+          </p>
+        </div>
+        <div class="card glass reveal d1">
+          <div class="card-icon">&#128202;</div>
+          <h3>Kenapa Berbahaya?</h3>
+          <ul class="check-list">
+            <li><strong>Volume masif:</strong> jutaan email/SMS phishing dikirim setiap hari.</li>
+            <li><strong>Mahal:</strong> kerugian global mencapai miliaran dolar per tahun.</li>
+            <li><strong>Target siapa saja:</strong> dari pelajar, pekerja, hingga CEO (whaling).</li>
+            <li><strong>Sulit dideteksi:</strong> situs palsu sering kali meniru aslinya hampir sempurna.</li>
+            <li><strong>Berantai:</strong> satu akun bocor bisa membuka akses ke akun lain.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="callout reveal">
+        <span class="callout-icon">&#128161;</span>
+        <p><strong>Fakta:</strong> Phishing adalah vektor serangan siber paling umum.
+        Menurut laporan industri keamanan, lebih dari 90% insiden kebocoran data
+        diawali oleh email atau pesan phishing. Edukasi diri adalah pertahanan terkuatmu.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== JENIS ===== -->
+  <section class="section section-alt" id="jenis">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">02 &mdash; Klasifikasi</span>
+        <h2>Jenis-Jenis <span class="text-gradient">Phishing</span></h2>
+        <p class="section-desc">Kenali bentuknya agar tidak tertipu.</p>
+      </div>
+      <div class="card-grid cols-4">
+        <div class="type-card reveal">
+          <div class="type-icon">&#128231;</div>
+          <h3>Email Phishing</h3>
+          <p>Email massal yang menyamar sebagai bank, marketplace, atau perusahaan legit. Biasanya berisi link ke situs palsu.</p>
+          <span class="type-tag">Paling umum</span>
+        </div>
+        <div class="type-card reveal d1">
+          <div class="type-icon">&#127919;</div>
+          <h3>Spear Phishing</h3>
+          <p>Serangan <em>terarah</em> ke individu/organisasi tertentu. Pelaku riset dulu — tahu jabatan, rekan kerja, proyek — lalu menyusun pesan yang sangat personal.</p>
+          <span class="type-tag">Targeted</span>
+        </div>
+        <div class="type-card reveal d2">
+          <div class="type-icon">&#128081;</div>
+          <h3>Whaling</h3>
+          <p>Versi spear phishing untuk <strong>eksekutif/CEO</strong>. Tujuannya data keuangan, strategi bisnis, atau transfer dana besar.</p>
+          <span class="type-tag high-risk</span>
+        </div>
+        <div class="type-card reveal d3">
+          <div class="type-icon">&#128241;</div>
+          <h3>Smishing</h3>
+          <p>Phishing lewat <strong>SMS</strong>. Contoh: "Paket Anda tertahan, klik link untuk bayar ongkir" atau "OTP Anda: 123456".</p>
+          <span class="type-tag">Via SMS</span>
+        </div>
+        <div class="type-card reveal">
+          <div class="type-icon">&#128222;</div>
+          <h3>Vishing</h3>
+          <p>Phishing lewat <strong>telepon/voice call</strong>. Pelaku menyamar sebagai CS bank, polisi, atau kurir dan memancing data pribadi atau OTP.</p>
+          <span class="type-tag">Via telepon</span>
+        </div>
+        <div class="type-card reveal d1">
+          <div class="type-icon">&#128247;</div>
+          <h3>Clone Phishing</h3>
+          <p>Penyerang menduplikasi email sah yang pernah dikirim, mengubah link-nya, lalu mengirim ulang. Korban merasa "pernah menerima email ini".</p>
+          <span class="type-tag">Advanced</span>
+        </div>
+        <div class="type-card reveal d2">
+          <div class="type-icon">&#128738;</div>
+          <h3>QR Phishing (Quishing)</h3>
+          <p>QR code berisi link jahat ditempel di parkir, spanduk, atau dikirim via chat. Scan QR = buka situs palsu.</p>
+          <span class="type-tag">Tren baru</span>
+        </div>
+        <div class="type-card reveal d3">
+          <div class="type-icon">&#127760;</div>
+          <h3>Pharming</h3>
+          <p>Pengalihan otomatis ke situs palsu lewat manipulasi DNS atau file hosts, <em>tanpa perlu klik link</em>. Lebih sulit dideteksi.</p>
+          <span class="type-tag high-risk</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MODUS OPERANDI ===== -->
+  <section class="section" id="modus">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">03 &mdash; Teknik Penyerang</span>
+        <h2>Modus <span class="text-gradient">Operandi</span> Penipu</h2>
+        <p class="section-desc">Pahami cara kerja mereka untuk memutus rantainya.</p>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-dot">1</div>
+          <div class="timeline-content glass">
+            <h3>Reconnaissance (Pengintaian)</h3>
+            <p>Penyerang mengumpulkan data publik tentangmu: nama, email kantor, media sosial, nomor HP, hingga struktur perusahaan. Tools seperti <code>theHarvester</code> atau sekadar scrolling LinkedIn cukup untuk ini.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-dot">2</div>
+          <div class="timeline-content glass">
+            <h3>Weaponization (Pembuatan Umpan)</h3>
+            <p>Umpan dibuat sangat mirip dengan aslinya: template email bank disalin pixel-perfect, domain palsu dibuat mirip (<code>bni-secure-login.com</code>, <code>tokopedia-official.info</code>), logo dan branding dicuri.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-dot">3</div>
+          <div class="timeline-content glass">
+            <h3>Delivery (Pengiriman)</h3>
+            <p>Umpan dikirim massal via email, SMS, DM media sosial, atau dipasang di situs web. Penyerang sering memakai teknik <strong>spoofing</strong> agar alamat pengirim tampak seperti domain resmi.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-dot">4</div>
+          <div class="timeline-content glass">
+            <h3>Exploitation (Eksploitasi)</h3>
+            <p>Korban klik link → diarahkan ke situs palsu → memasukkan kredensial/OTP/kartu. Data langsung terkirim ke server penyerang. Kadang juga malware (keylogger/RAT) terpasang diam-diam.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-dot">5</div>
+          <div class="timeline-content glass">
+            <h3>Monetization & Cover-Up</h3>
+            <p>Data dijual di dark web, dipakai transfer dana, belanja online, atau jadi senjata spear phishing lanjutan. Situs palsu sering dihapus dalam hitungan jam untuk menghindari pelaporan.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-grid two-col mt-4">
+        <div class="card glass accent-red reveal">
+          <h3>&#128680; Teknik Manipulasi Psikologis</h3>
+          <ul class="check-list">
+            <li><strong>Urgensi:</strong> "Akun diblokir dalam 24 jam!"</li>
+            <li><strong>Takut:</strong> "Transaksi mencurigakan terdeteksi"</li>
+            <li><strong>Greed:</strong> "Selamat! Kamu menang undian Rp 50 juta"</li>
+            <li><strong>Otoritas:</strong> menyamar sebagai bank, polisi, atasan</li>
+            <li><strong>FOMO:</strong> "Penawaran terbatas, klaim sekarang!"</li>
+          </ul>
+        </div>
+        <div class="card glass accent-blue reveal d1">
+          <h3>&#128270; Teknik Teknis yang Digunakan</h3>
+          <ul class="check-list">
+            <li><strong>Domain spoofing:</strong> domain mirip (<code>paypa1.com</code>).</li>
+            <li><strong>URL shortening:</strong> <code>bit.ly/xxx</code> menyembunyikan tujuan.</li>
+            <li><strong>Punycode/IDN homograph:</strong> huruf mirip (l → paypal).</li>
+            <li><strong>Email spoofing:</strong> alamat pengirim palsu via SMTP.</li>
+            <li><strong>Attachment berbahaya:</strong> file .exe, .html, macro Word.</li>
+            <li><strong>Typosquatting:</strong> salah ketik domain (gogle.com).</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RED FLAGS ===== -->
+  <section class="section section-alt" id="redflags">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">04 &mdash; Deteksi</span>
+        <h2>Red <span class="text-gradient">Flags</span>: Ciri-Ciri Phishing</h2>
+        <p class="section-desc">Layar radar untuk email & pesan mencurigakan.</p>
+      </div>
+      <div class="redflags-grid">
+        <div class="redflag-item reveal"><span class="rf-num">&#9888;</span><div><h4>Bahasa & Ejaan Buruk</h4><p>Grammar aneh, ejaan salah, format tidak rapi — padahal bank resmi sangat ketat.</p></div></div>
+        <div class="redflag-item reveal d1"><span class="rf-num">&#128279;</span><div><h4>Link Mencurigakan</h4><p>Selalu <strong>arahkan kursor</strong> ke link untuk lihat URL aslinya. Cek domain, bukan teks link.</p></div></div>
+        <div class="redflag-item reveal d2"><span class="rf-num">&#128231;</span><div><h4>Alamat Pengirim Aneh</h4><p>Pengirim harus domain resmi (mis. <code>@bni.co.id</code>, bukan <code>@gmail.com</code> atau <code>@bni-secure.xyz</code>).</p></div></div>
+        <div class="redflag-item reveal d3"><span class="rf-num">&#9200;</span><div><h4>Tekanan Waktu Ekstrem</h4><p>"Dalam 1 jam!" "Segera!" — dibuat agar kamu panik dan tidak berpikir.</p></div></div>
+        <div class="redflag-item reveal"><span class="rf-num">&#128274;</span><div><h4>Minta Data Sensitif</h4><p>Bank/pemerintah <strong>tidak pernah</strong> meminta password, PIN, OTP, atau CVV lewat email/SMS/telepon.</p></div></div>
+        <div class="redflag-item reveal d1"><span class="rf-num">&#128206;</span><div><h4>Attachment Tak Diminta</h4><p>File .exe, .scr, .js, .html, atau dokumen dengan macro — jangan dibuka.</p></div></div>
+        <div class="redflag-item reveal d2"><span class="rf-num">&#128181;</span><div><h4>Janji Tidak Masuk Akal</h4><p>Hadiah, refund, tunjangan, atau "kamu terpilih" tanpa kamu ikuti lomba apa pun.</p></div></div>
+        <div class="redflag-item reveal d3"><span class="rf-num">&#128336;</span><div><h4>Permintaan Transfer/OTP</h4><p>"Verifikasi dengan kode OTP" — OTP adalah kunci, jangan pernah diberikan ke siapapun.</p></div></div>
+      </div>
+      <div class="callout callout-blue reveal">
+        <span class="callout-icon">&#128161;</span>
+        <p><strong>Aturan Emas:</strong> Saat ragu, jangan klik — buka aplikasi resmi atau ketik URL manual di browser. Verifikasi lewat kanal resmi (CS resmi, website resmi), bukan link di pesan.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== KASUS NYATA ===== -->
+  <section class="section section-alt" id="kasus">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">05 &mdash; Kenali Modusnya</span>
+        <h2>Skema Penipuan yang <span class="text-gradient">Sering Beredar</span></h2>
+        <p class="section-desc">Kenali pola umumnya sebelum kamu jadi target berikutnya.</p>
+      </div>
+      <div class="card-grid cols-3">
+        <div class="case-card reveal">
+          <div class="case-icon">&#128230;</div>
+          <h3>Kurir & Paket Gagal Antar</h3>
+          <p class="case-skenario">"Paket kamu tertahan di gudang, bayar biaya admin Rp 15.000 lewat link ini sebelum dikembalikan."</p>
+          <p class="case-redflag"><strong>Red flag:</strong> kurir resmi tidak pernah menagih via link pribadi; cek resi langsung di aplikasi resmi.</p>
+          <p class="case-safe"><strong>Aman:</strong> buka aplikasi kurir/marketplace, cek status resi di sana.</p>
+        </div>
+        <div class="case-card reveal d1">
+          <div class="case-icon">&#127873;</div>
+          <h3>Undian & Hadiah Palsu</h3>
+          <p class="case-skenario">"Selamat! Kamu terpilih menerima hadiah Rp 25 juta dari program loyalitas. Bayar pajak/pengiriman dulu."</p>
+          <p class="case-redflag"><strong>Red flag:</strong> kamu tidak pernah mendaftar; minta transfer/bayar dulu = pasti penipuan.</p>
+          <p class="case-safe"><strong>Aman:</strong> hadiah asli tidak pernah minta biaya di muka.</p>
+        </div>
+        <div class="case-card reveal d2">
+          <div class="case-icon">&#127974;</div>
+          <h3>Bank: "Rekening Akan Dibekukan"</h3>
+          <p class="case-skenario">"Ada transfer mencurigakan dari rekeningmu. Verifikasi identitas segera atau rekening dibekukan 24 jam."</p>
+          <p class="case-redflag"><strong>Red flag:</strong> bank tidak pernah minta password/OTP lewat telepon atau link; tekanan waktu ekstrem.</p>
+          <p class="case-safe"><strong>Aman:</strong> tutup telepon, call center resmi bank dari nomor di kartu ATM.</p>
+        </div>
+        <div class="case-card reveal">
+          <div class="case-icon">&#128188;</div>
+          <h3>Lowongan Kerja & Affiliate</h3>
+          <p class="case-skenario">"Kerja remote gaji Rp 5 juta/minggu, cukup promosikan produk. Daftar via link ini & isi data lengkap."</p>
+          <p class="case-redflag"><strong>Red flag:</strong> minta login akun marketplace, bayar "pelatihan", atau OTP untuk "verifikasi".</p>
+          <p class="case-safe"><strong>Aman:</strong> jangan pernah bagikan kredensial marketplace ke siapapun.</p>
+        </div>
+        <div class="case-card reveal d1">
+          <div class="case-icon">&#128148;</div>
+          <h3>Love Scam (Pacaran Online)</h3>
+          <p class="case-skenario">"Pacar" yang baru kenal seminggu, profil meyakinkan, tiba-tiba minta dana untuk "operasi darurat" atau "biaya bea cukai paket".</p>
+          <p class="case-redflag"><strong>Red flag:</strong> foto curian, selalu ada alasan tidak bisa bertemu, cerita darurat berulang.</p>
+          <p class="case-safe"><strong>Aman:</strong> jangan transfer sebelum pernah bertemu langsung & verifikasi identitas.</p>
+        </div>
+        <div class="case-card reveal d2">
+          <div class="case-icon">&#128222;</div>
+          <h3>Panggilan "CS" Palsu</h3>
+          <p class="case-skenario">Telepon dari "customer service bank" yang tahu nama & 4 digit kartu terakhirmu, minta OTP "untuk pembatalan transaksi".</p>
+          <p class="case-redflag"><strong>Red flag:</strong> bank asli tidak pernah minta OTP; data pribadimu bisa didapat dari kebocoran data.</p>
+          <p class="case-safe"><strong>Aman:</strong> OTP = kunci. Tarik telepon, hubungi bank lewat nomor resmi.</p>
+        </div>
+      </div>
+      <div class="callout reveal">
+        <span class="callout-icon">&#128161;</span>
+        <p><strong>Benang Merah:</strong> hampir semua skema di atas bermuara pada satu hal — memancingmu mengklik link, membuka attachment, atau memberikan OTP/kredensial. Putus salah satu dari tiga itu, dan penipuan gagal total.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRAKTIK ===== -->
+  <section class="section" id="praktik">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">06 &mdash; Hands-on</span>
+        <h2>Modul <span class="text-gradient">Praktik</span></h2>
+        <p class="section-desc">Teori tanpa praktik = setengah jadi. Coba ketiga alat ini.</p>
+      </div>
+
+      <!-- Praktik 1: Quiz -->
+      <div class="practice-card reveal" id="quiz-card">
+        <div class="practice-header">
+          <div class="practice-badge">Praktik 1</div>
+          <h3>Kuis Deteksi Phishing</h3>
+          <p>8 skenario email/pesan. Tentukan: <strong>Aman</strong> atau <strong>Phishing</strong>?</p>
+        </div>
+        <div class="quiz-progress"><div class="quiz-bar" id="quizBar"></div></div>
+        <div class="quiz-body" id="quizBody">
+          <div class="quiz-question" id="quizQuestion"></div>
+          <div class="quiz-message" id="quizMessage"></div>
+          <div class="quiz-actions" id="quizActions">
+            <button class="btn btn-safe" id="btnSafe">&#9989; Aman</button>
+            <button class="btn btn-danger" id="btnPhish">&#128737; Phishing</button>
+          </div>
+          <button class="btn btn-primary hidden" id="btnNext">Soal Berikutnya &#8594;</button>
+        </div>
+        <div class="quiz-result hidden" id="quizResult">
+          <div class="quiz-score" id="quizScore"></div>
+          <p id="quizVerdict"></p>
+          <button class="btn btn-primary" id="btnRestart">Ulangi Kuis</button>
+        </div>
+      </div>
+
+      <!-- Praktik 2: URL Checker -->
+      <div class="practice-card reveal" id="urlchecker">
+        <div class="practice-header">
+          <div class="practice-badge">Praktik 2</div>
+          <h3>Pemeriksa URL</h3>
+          <p>Masukkan URL mencurigakan. Alat ini menganalisis pola domain secara lokal di browser-mu.</p>
+        </div>
+        <div class="url-input-row">
+          <input type="text" id="urlInput" placeholder="contoh: https://bni-secure-login.com/verifikasi" spellcheck="false" />
+          <button class="btn btn-primary" id="btnCheckUrl">Periksa</button>
+        </div>
+        <div class="url-result hidden" id="urlResult"></div>
+        <div class="url-examples">
+          <p>Coba contoh:</p>
+          <button class="chip" data-url="https://www.bni.co.id">https://www.bni.co.id</button>
+          <button class="chip warn" data-url="https://bni-secure-login.xyz/verifikasi">bni-secure-login.xyz/verifikasi</button>
+          <button class="chip warn" data-url="http://185.220.101.4/paypal-login">185.220.101.4/paypal-login</button>
+          <button class="chip warn" data-url="https://paypa1-secure.tk/account">paypa1-secure.tk/account</button>
+        </div>
+      </div>
+
+      <!-- Praktik 3: Header Analyzer -->
+      <div class="practice-card reveal" id="headerlab">
+        <div class="practice-header">
+          <div class="practice-badge">Praktik 3</div>
+          <h3>Lab Analisis Header Email</h3>
+          <p>Perhatikan email "resmi bank" berikut. Klik header untuk melihat red flags yang tersembunyi.</p>
+        </div>
+        <div class="fake-email">
+          <div class="email-topbar">
+            <div class="email-avatar">B</div>
+            <div class="email-from">
+              <strong>Bank Nasional Indonesia</strong>
+              <span>&lt;security-alert@bni-secure.xyz&gt;</span>
+            </div>
+            <div class="email-meta">Kemarin, 14:32</div>
+          </div>
+          <div class="email-subject">PENTING: Akun Anda Akan DIBLOKIR dalam 24 Jam!</div>
+          <div class="email-body">
+            <p>Yth. Nasabah BCA,</p>
+            <p>Kami mendeteksi <strong>aktivitas login tidak biasa</strong> dari perangkat baru. Demi keamanan, silakan verifikasi identitas Anda segera dengan mengklik tombol di bawah ini:</p>
+            <div class="email-cta-fake">Verifikasi Sekarang (Tautan Palsu)</div>
+            <p style="font-size:.85em;color:var(--muted)">*Bila tidak diverifikasi, akun akan diblokir permanen.</p>
+          </div>
+          <details class="email-headers">
+            <summary>&#128269; Lihat Header Asli (klik untuk membuka)</summary>
+            <div class="headers-content">
+              <div class="header-row flag"><span class="h-key">Return-Path:</span><span class="h-val">&lt;bounce@random-mail.ru&gt;</span></div>
+              <div class="header-row flag"><span class="h-key">From:</span><span class="h-val">Bank Nasional Indonesia &lt;security-alert@bni-secure.xyz&gt;</span></div>
+              <div class="header-row flag"><span class="h-key">Reply-To:</span><span class="h-val">support@gmail.com</span></div>
+              <div class="header-row flag"><span class="h-key">Received-SPF:</span><span class="h-val">fail (google.com: domain of ... does not designate ... as permitted sender)</span></div>
+              <div class="header-row flag"><span class="h-key">DKIM-Signature:</span><span class="h-val">none</span></div>
+              <div class="header-row"><span class="h-key">To:</span><span class="h-val">victim@example.com</span></div>
+              <div class="header-note">&#128680; Baris berwarna merah adalah red flags: domain pengirim bukan <code>bni.co.id</code>, Reply-To ke Gmail, SPF gagal, tidak ada tanda tangan DKIM, dan nama bank tidak konsisten (&ldquo;Nasabah BCA&rdquo; di email BNI).</div>
+            </div>
+          </details>
+        </div>
+        <div class="callout reveal">
+          <span class="callout-icon">&#128161;</span>
+          <p><strong>Cara melihat header asli:</strong> Gmail → buka email → panah di samping "Balas" → <em>Show original</em>. Outlook → File → Properties → Internet Headers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PENCEGAHAN ===== -->
+  <section class="section section-alt" id="pencegahan">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">07 &mdash; Pertahanan</span>
+        <h2>Cara <span class="text-gradient">Mencegah</span> Phishing</h2>
+        <p class="section-desc">Lapis pertahanan dimulai dari dirimu.</p>
+      </div>
+      <div class="content-grid cols-3">
+        <div class="card glass reveal">
+          <div class="card-icon">&#128187;</div>
+          <h3>Teknis</h3>
+          <ul class="check-list">
+            <li>Aktifkan <strong>2FA/MFA</strong> di semua akun penting.</li>
+            <li>Pakai password manager + password unik per akun.</li>
+            <li>Jangan pernah berikan OTP ke siapapun — termasuk "CS bank".</li>
+            <li>Update OS & aplikasi secara rutin.</li>
+            <li>Aktifkan filter spam & don't click attachment mencurigakan.</li>
+            <li>Verifikasi QR code parkir/umum sebelum scan.</li>
+          </ul>
+        </div>
+        <div class="card glass reveal d1">
+          <div class="card-icon">&#129504;</div>
+          <h3>Perilaku</h3>
+          <ul class="check-list">
+            <li>Selalu curigai urgensi & tawaran too-good-to-be-true.</li>
+            <li>Arahkan kursor ke link untuk cek domain asli.</li>
+            <li>Buka aplikasi resmi daripada klik link di email/SMS.</li>
+            <li>Batasi info pribadi di media sosial (memudahkan spear phishing).</li>
+            <li>Verifikasi lewat kanal resmi jika ragu.</li>
+          </ul>
+        </div>
+        <div class="card glass reveal d2">
+          <div class="card-icon">&#128737;</div>
+          <h3>Organisasi</h3>
+          <ul class="check-list">
+            <li>Pelatihan anti-phishing berkala untuk karyawan.</li>
+            <li>Simulasi phishing internal (phishing test).</li>
+            <li>Prosedur verifikasi transfer/permintaan data.</li>
+            <li>Laporkan email mencurigakan ke tim IT/security.</li>
+            <li>Gunakan DMARC/SPF/DKIM untuk domain perusahaan.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Checklist Interaktif -->
+      <div class="checklist-card reveal" id="checklist">
+        <div class="checklist-header">
+          <h3>&#9989; Self-Audit Keamanan Digital</h3>
+          <p>Centang yang sudah kamu lakukan. Target: semua hijau!</p>
+        </div>
+        <div class="checklist-progress">
+          <div class="checklist-bar-wrap"><div class="checklist-bar" id="checklistBar"></div></div>
+          <span id="checklistPct">0%</span>
+        </div>
+        <div class="checklist-grid" id="checklistGrid">
+          <label class="check-item"><input type="checkbox" data-item="mfa"><span>MFA/2FA aktif di email & media sosial</span></label>
+          <label class="check-item"><input type="checkbox" data-item="pass"><span>Password unik per akun (pakai password manager)</span></label>
+          <label class="check-item"><input type="checkbox" data-item="otp"><span>OTP tidak pernah dibagikan ke siapapun</span></label>
+          <label class="check-item"><input type="checkbox" data-item="link"><span>Selalu cek domain sebelum klik link</span></label>
+          <label class="check-item"><input type="checkbox" data-item="app"><span>Transaksi lewat aplikasi resmi, bukan link</span></label>
+          <label class="check-item"><input type="checkbox" data-item="attach"><span>Tidak buka attachment mencurigakan</span></label>
+          <label class="check-item"><input type="checkbox" data-item="update"><span>Sistem & aplikasi rutin di-update</span></label>
+          <label class="check-item"><input type="checkbox" data-item="backup"><span>Backup data penting berkala</span></label>
+          <label class="check-item"><input type="checkbox" data-item="sosmed"><span>Privasi media sosial diperketat</span></label>
+          <label class="check-item"><input type="checkbox" data-item="report"><span>Tahu cara melapor email phishing</span></label>
+        </div>
+        <div class="checklist-verdict hidden" id="checklistVerdict"></div>
+        <button class="btn btn-ghost btn-sm" id="checklistReset">Reset Checklist</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== KORBAN ===== -->
+  <section class="section" id="korban">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">08 &mdash; Tindakan Darurat</span>
+        <h2>Sudah Jadi <span class="text-gradient">Korban?</span></h2>
+        <p class="section-desc">Bertindak cepat 5 menit pertama menentukan kerugian.</p>
+      </div>
+      <div class="steps-emergency">
+        <div class="step-emer reveal"><div class="step-num">1</div><h4>Putus Akses</h4><p>Ganti password akun yang dikompromikan <strong>segera</strong> dari perangkat lain yang aman.</p></div>
+        <div class="step-emer reveal d1"><div class="step-num">2</div><h4>Cabut Sesi</h4><p>Logout semua perangkat ("sign out all devices") di email/media sosial yang kena.</p></div>
+        <div class="step-emer reveal d2"><div class="step-num">3</div><h4>Hubungi Bank</h4><p>Call center resmi bank untuk bekukan kartu & cek transaksi mencurigakan.</p></div>
+        <div class="step-emer reveal d3"><div class="step-num">4</div><h4>Laporkan</h4><p>Ke bank, e-commerce terkait, dan polisi (patroli siber / <em>cybercrime</em>) bila ada kerugian finansial.</p></div>
+        <div class="step-emer reveal"><div class="step-num">5</div><h4>Waspadai Lanjutan</h4><p>Korban sering jadi target spear phishing lanjutan — waspadai pesan "kami dari bank" setelah kejadian.</p></div>
+      </div>
+      <div class="callout callout-blue reveal">
+        <span class="callout-icon">&#128737;</span>
+        <p><strong>Ingat:</strong> Tidak ada yang bisa "membatalkan" transaksi begitu saja — tapi tindakan cepat tetap bisa meminimalkan kerugian. Dan kamu tidak sendirian; ini kejahatan, bukan kesalahan pribadimu.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GLOSARIUM ===== -->
+  <section class="section section-alt" id="glosarium">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">09 &mdash; Kamus Istilah</span>
+        <h2><span class="text-gradient">Glosarium</span> Keamanan Siber</h2>
+        <p class="section-desc">Istilah-istilah yang sering muncul saat membahas keamanan digital.</p>
+      </div>
+      <div class="glossary-grid">
+        <div class="gloss-item reveal"><h4>Phishing</h4><p>Penipuan dengan menyamar sebagai pihak tepercaya untuk mencuri data sensitif.</p></div>
+        <div class="gloss-item reveal d1"><h4>Smishing</h4><p>Phishing via SMS — sering berupa link atau OTP palsu.</p></div>
+        <div class="gloss-item reveal d2"><h4>Vishing</h4><p>Phishing via panggilan telepon/voice call.</p></div>
+        <div class="gloss-item reveal d3"><h4>Spear Phishing</h4><p>Phishing terarah ke individu/organisasi dengan riset mendalam.</p></div>
+        <div class="gloss-item reveal"><h4>Whaling</h4><p>Spear phishing yang menargetkan eksekutif/C-level.</p></div>
+        <div class="gloss-item reveal d1"><h4>Pharming</h4><p>Pengalihan ke situs palsu lewat manipulasi DNS, tanpa klik link.</p></div>
+        <div class="gloss-item reveal d2"><h4>Spoofing</h4><p>Pemalsuan identitas pengirim (email, nomor telepon, IP).</p></div>
+        <div class="gloss-item reveal d3"><h4>Typosquatting</h4><p>Domain mirip dengan salah ketik disengaja (gogle.com, paypa1.com).</p></div>
+        <div class="gloss-item reveal"><h4>Punycode / Homograph</h4><p>Karakter Unicode yang tampak identik (Cyrillic '' vs Latin 'a') untuk meniru domain.</p></div>
+        <div class="gloss-item reveal d1"><h4>Malware</h4><p>Perangkat lunak berbahaya: virus, trojan, ransomware, spyware.</p></div>
+        <div class="gloss-item reveal d2"><h4>Keylogger</h4><p>Malware yang merekam ketukan keyboard untuk mencuri password.</p></div>
+        <div class="gloss-item reveal d3"><h4>RAT</h4><p>Remote Access Trojan — memberi kontrol penuh perangkat ke penyerang.</p></div>
+        <div class="gloss-item reveal"><h4>Credential Stuffing</h4><p>Uji username/password bocor ke banyak situs sekaligus.</p></div>
+        <div class="gloss-item reveal d1"><h4>MFA / 2FA</h4><p>Autentikasi multi-faktor: password + OTP/biometrik/push approval.</p></div>
+        <div class="gloss-item reveal d2"><h4>OTP</h4><p>One-Time Password — kode sekali pakai. Jangan pernah dibagikan.</p></div>
+        <div class="gloss-item reveal d3"><h4>SPF / DKIM / DMARC</h4><p>Protokol email yang memverifikasi pengirim sah dan mencegah spoofing.</p></div>
+        <div class="gloss-item reveal"><h4>Social Engineering</h4><p>Manipulasi psikologis manusia — senjata utama di balik semua phishing.</p></div>
+        <div class="gloss-item reveal d1"><h4>BEC</h4><p>Business Email Compromise — penipuan transfer dana lewat email kerja palsu.</p></div>
+        <div class="gloss-item reveal d2"><h4>Dark Web</h4><p>Bagian internet tersembunyi tempat data curian & alat phishing diperjualbelikan.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MITOS VS FAKTA ===== -->
+  <section class="section" id="mitos">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">10 &mdash; Membedah Mitos</span>
+        <h2>Mitos vs <span class="text-gradient">Fakta</span></h2>
+        <p class="section-desc">Keyakinan keliru ini yang membuat jutaan orang tertipu.</p>
+      </div>
+      <div class="card-grid cols-3">
+        <div class="myth-card reveal">
+          <div class="myth-tag myth">MITOS</div>
+          <p>"Phishing cuma lewat email."</p>
+          <div class="myth-tag fact">FAKTA</div>
+          <p>Phishing hadir di SMS, WhatsApp, telepon, media sosial, QR code, hingga iklan berbahaya (malvertising).</p>
+        </div>
+        <div class="myth-card reveal d1">
+          <div class="myth-tag myth">MITOS</div>
+          <p>"Kalau situsnya HTTPS pasti aman."</p>
+          <div class="myth-tag fact">FAKTA</div>
+          <p>Sertifikat SSL gratis — hampir semua situs phishing pakai HTTPS. Gembok ≠ situs tepercaya.</p>
+        </div>
+        <div class="myth-card reveal d2">
+          <div class="myth-tag myth">MITOS</div>
+          <p>"Hanya orang tua/kurang melek teknologi yang kena."</p>
+          <div class="myth-tag fact">FAKTA</div>
+          <p>Semua usia jadi korban. Spear phishing justru menargetkan profesional & eksekutif.</p>
+        </div>
+        <div class="myth-card reveal">
+          <div class="myth-tag myth">MITOS</div>
+          <p>"Asal tidak klik link, pasti aman."</p>
+          <div class="myth-tag fact">FAKTA</div>
+          <p>Attachment berbahaya, QR code, panggilan telepon, dan iklan pun bisa jadi vektor serangan.</p>
+        </div>
+        <div class="myth-card reveal d1">
+          <div class="myth-tag myth">MITOS</div>
+          <p>"Password yang kuat sudah cukup."</p>
+          <div class="myth-tag fact">FAKTA</div>
+          <p>Password bisa dicuri lewat phishing. MFA memastikan password saja tidak cukup untuk masuk.</p>
+        </div>
+        <div class="myth-card reveal d2">
+          <div class="myth-tag myth">MITOS</div>
+          <p>"Kalau tidak kehilangan uang, berarti tidak apa-apa."</p>
+          <div class="myth-tag fact">FAKTA</div>
+          <p>Akun yang dibobol bisa dipakai menyebar penipuan atas namamu, atau data pribadimu dijual.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TIPS PER PLATFORM ===== -->
+  <section class="section section-alt" id="platform">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">11 &mdash; Per Channel</span>
+        <h2>Tips Bertahan di <span class="text-gradient">Setiap Platform</span></h2>
+        <p class="section-desc">Aturan khusus untuk kanal yang paling sering diserang.</p>
+      </div>
+      <div class="card-grid cols-3">
+        <div class="platform-card reveal">
+          <div class="platform-icon">&#128241;</div>
+          <h3>WhatsApp & SMS</h3>
+          <ul class="check-list">
+            <li>Jangan klik link dari nomor tak dikenal — bahkan kalau profilnya mirip teman.</li>
+            <li>Waspadai "kode OTP" yang kamu minta untuk diverifikasi pihak lain.</li>
+            <li>Aktifkan verifikasi 2 langkah WhatsApp (Pengaturan → Akun).</li>
+            <li>Nomor "bank resmi" lewat WA = hampir pasti palsu; bank pakai call center resmi.</li>
+          </ul>
+        </div>
+        <div class="platform-card reveal d1">
+          <div class="platform-icon">&#128231;</div>
+          <h3>Email</h3>
+          <ul class="check-list">
+            <li>Periksa alamat pengirim lengkap — jangan percaya nama tampilan.</li>
+            <li>Arahkan kursor ke link untuk preview URL tanpa klik.</li>
+            <li>Hati-hati lampiran .exe, .scr, .html, .zip, dokumen macro.</li>
+            <li>Laporkan phishing ke penyedia email (Gmail: "Report phishing").</li>
+          </ul>
+        </div>
+        <div class="platform-card reveal d2">
+          <div class="platform-icon">&#128172;</div>
+          <h3>Media Sosial</h3>
+          <ul class="check-list">
+            <li>Akun "customer service" palsu sering meniru brand — cek centang verifikasi.</li>
+            <li>DM berisi link hadiah/loker = modus paling umum di medsos.</li>
+            <li>Jangan klik iklan yang menjanjikan hal tidak masuk akal.</li>
+            <li>Batasi data pribadi publik — bahan bakar spear phishing.</li>
+          </ul>
+        </div>
+        <div class="platform-card reveal">
+          <div class="platform-icon">&#128222;</div>
+          <h3>Telepon</h3>
+          <ul class="check-list">
+            <li>Bank/pemerintah resmi tidak pernah minta OTP, PIN, atau password.</li>
+            <li>Nomor tak dikenal + urgensi = ciri vishing.</li>
+            <li>Tutup dan hubungi balik lewat nomor resmi yang kamu tahu.</li>
+            <li>Waspadai "deepfake voice" — suara bisa dipalsukan AI.</li>
+          </ul>
+        </div>
+        <div class="platform-card reveal d1">
+          <div class="platform-icon">&#128200;</div>
+          <h3>Perbankan & Dompet Digital</h3>
+          <ul class="check-list">
+            <li>Transaksi hanya lewat aplikasi resmi yang kamu install sendiri.</li>
+            <li>Set limit transaksi harian & notifikasi real-time.</li>
+            <li>Jangan pernah scan QR code yang dikirim orang tak dikenal.</li>
+            <li>Kalau ragu ada transaksi, langsung hubungi call center bank.</li>
+          </ul>
+        </div>
+        <div class="platform-card reveal d2">
+          <div class="platform-icon">&#128104;&#8205;&#128187;</div>
+          <h3>Tempat Kerja</h3>
+          <ul class="check-list">
+            <li>Permintaan transfer mendesak dari "atasan" → verifikasi lewat jalur lain.</li>
+            <li>Laporkan email mencurigakan ke tim IT segera.</li>
+            <li>Jangan gunakan email kantor untuk registrasi situs luar.</li>
+            <li>Ikuti simulasi phishing internal dengan serius.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">12 &mdash; Tanya Jawab</span>
+        <h2>Pertanyaan yang Sering <span class="text-gradient">Ditanyakan</span></h2>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item reveal">
+          <summary>Apakah mengklik link phishing langsung membuat perangkat kena virus?</summary>
+          <p>Tidak selalu. Banyak link phishing hanya membawa ke situs palsu untuk mencuri data yang kamu ketik. Namun beberapa link bisa mengunduh malware (drive-by download) tanpa kamu sadari — terutama di perangkat yang tidak di-update. Jadi, tetap jangan klik.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>Bagaimana cara melaporkan email/SMS phishing di Indonesia?</summary>
+          <p>Beberapa kanal: (1) fitur "Report phishing" di Gmail/Outlook, (2) forward SMS/email ke <strong>121</strong> (operator seluler), (3) lapor ke patrol siber Polri atau <strong>patroli.siber.id</strong>, (4) bank/merchant terkait untuk memblokir domain. Laporkan — kamu bisa mencegah orang lain jadi korban.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>Apakah VPN membuat saya kebal phishing?</summary>
+          <p>Tidak. VPN melindungi data saat browsing, tapi tidak mencegahmu mengklik link jahat atau memasukkan password di situs palsu. Phishing menyerang manusia, bukan koneksi.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>Apa yang terjadi kalau OTP saya bocor?</summary>
+          <p>OTP adalah kunci transaksi. Jika bocor, penipu bisa menarik dana, mengubah password, atau mengaktifkan layanan atas namamu. Tindakan: segera hubungi bank/app terkait untuk membatalkan, ganti password, dan aktifkan MFA.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>Bagaimana membedakan situs login asli vs palsu?</summary>
+          <p>(1) Cek domain persis — ketik manual URL resmi daripada klik link. (2) Cek sertifikat SSL (klik gembok → lihat domain di sertifikat). (3) Login lewat aplikasi resmi di smartphone. (4) Bandingkan tampilan dengan situs yang kamu tahu — logo, layout, URL.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>Apakah antivirus bisa melindungi dari phishing?</summary>
+          <p>Antivirus modern punya proteksi web (URL filtering) yang memblokir banyak situs phishing yang sudah teridentifikasi. Tapi phishing baru (zero-day) bisa lolos — karena itu kebiasaan curiga dan verifikasi tetap pertahanan terpenting.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="logo"><span class="logo-icon">&#128737;</span><span class="logo-text">Nasrullah<span class="logo-nim">NIM H0625307</span></span></div>
+      <p>Edukasional & defensif. Website ini dibuat untuk meningkatkan literasi keamanan siber — bukan untuk melakukan penipuan.</p>
+      <p class="footer-small">&copy; 2026 PhishGuard. Belajar, waspada, dan stay safe.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
